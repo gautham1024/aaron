@@ -1,6 +1,8 @@
 // pages/about.js
 import Head from 'next/head';
 import { Globe, Users, Award, Building } from 'lucide-react';
+import Header from '../Header';
+import Footer from '../Footer';
 
 export default function About() {
   const milestones = [
@@ -47,6 +49,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen">
+      <Header />
       <Head>
         <title>About Us - Aaron North America Ltd</title>
         <meta name="description" content="Learn about Aaron North America Ltd's journey and achievements" />
@@ -120,6 +123,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

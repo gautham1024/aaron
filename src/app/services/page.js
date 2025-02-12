@@ -2,6 +2,8 @@
 import Head from 'next/head';
 import { Shield, Server, Laptop, Cloud, Users, Phone, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import Header from '../Header';
+import Footer from '../Footer';
 
 export default function Services() {
   const [activeService, setActiveService] = useState(null);
@@ -83,6 +85,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Header />
       <Head>
         <title>Our Services - Aaron North America Ltd</title>
         <meta name="description" content="Comprehensive IT and security services offered by Aaron North America Ltd" />
@@ -118,7 +121,7 @@ export default function Services() {
                 </div>
 
                 {/* Content */}
-                <h2 className="text-2xl font-bold mb-4 group-hover:text-blue-800 transition-colors duration-300">
+                <h2 className="text-2xl text-blue-600 font-bold mb-4 group-hover:text-blue-800 transition-colors duration-300">
                   {service.title}
                 </h2>
                 <p className="text-gray-600 mb-6 line-clamp-2">
@@ -158,6 +161,7 @@ export default function Services() {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
