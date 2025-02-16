@@ -19,3 +19,31 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-container {
+  display: flex;
+  gap: 2rem; /* Adjust spacing between images */
+  width: max-content; /* Ensures scrolling works smoothly */
+  animation: marquee 20s linear infinite; /* Adjust timing as needed */
+}
+
+.marquee-item {
+  flex-shrink: 0;
+}
